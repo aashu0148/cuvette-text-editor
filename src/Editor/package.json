@@ -1,0 +1,32 @@
+{
+  "name": "cuvette-text-editor",
+  "version": "1.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel editor.js -o index.js"
+  },
+  "keywords": [
+    "editor",
+    "rich-text-editor",
+    "react"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/polyfill": "^7.12.1",
+    "draft-js": "^0.11.7",
+    "prop-types": "^15.8.0",
+    "react-icons": "^4.3.1"
+  },
+  "peerDependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.7",
+    "@babel/core": "^7.16.7",
+    "@babel/preset-env": "^7.16.7"
+  }
+}

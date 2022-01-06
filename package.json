@@ -1,13 +1,20 @@
 {
-  "name": "test-editor",
+  "name": "cuvette-text-editor",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/polyfill": "^7.12.1",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
+    "cuvette-text-editor": "^1.0.1",
+    "draft-js": "^0.11.7",
+    "prop-types": "^15.8.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-feather": "^2.0.9",
+    "react-icons": "^4.3.1",
+    "react-rich-text-editor-v1": "^1.0.12",
     "react-scripts": "5.0.0",
     "web-vitals": "^2.1.2"
   },
@@ -34,5 +41,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.7",
+    "@babel/core": "^7.16.7",
+    "@babel/preset-env": "^7.16.7"
   }
 }
