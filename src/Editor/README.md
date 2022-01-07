@@ -1,12 +1,10 @@
 # cuvette-text-editor
 
----
 
 A rich text editor for react, built over [draft.js](https://draftjs.org/)
 
-## Installation and Usage
-
 ---
+## Installation and Usage
 
 The easiest way to install cuvette-text-editor is to install it via npm -
 `npm i cuvette-text-editor`
@@ -35,9 +33,8 @@ function MyComponent(props) {
 
 and that's it, no need to import any external css nothing else. Just import and start using it.
 
-## Props
-
 ---
+## Props
 
 These are the props we have -
 | Prop Name       | Prop Type  | description                                                                                                                                                                         | example                                                                                                                                                                          |
