@@ -479,7 +479,7 @@ Editor.propTypes = {
   toolbarToBottom: _propTypes.default.bool,
   hideSeparator: _propTypes.default.bool,
   colors: _propTypes.default.object,
-  hiddenOptions: _propTypes.default.array
+  hiddenOptions: _propTypes.default.arrayOf(_propTypes.default.string)
 };
 var _default = Editor;
 exports.default = _default;

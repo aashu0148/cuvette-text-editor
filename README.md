@@ -1,7 +1,8 @@
 # cuvette-text-editor
 
-
 A rich text editor for react, built over [draft.js](https://draftjs.org/)
+
+![cuvette-text-editor](cuvette-text-editor.gif)
 
 ---
 ## Installation and Usage

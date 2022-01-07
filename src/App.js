@@ -9,7 +9,7 @@ function App() {
       <div className="wrapper">
         <Editor
           placeholder="Type something"
-          hiddenOptions={["ItAlIc", "header-one", "unordered-list-item"]}
+          // hiddenOptions={["ItAlIc", "header-one", "unordered-list-item"]}
         />
       </div>
     </div>
