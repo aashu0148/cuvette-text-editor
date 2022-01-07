@@ -476,7 +476,7 @@ Editor.propTypes = {
   toolbarToBottom: PropTypes.bool,
   hideSeparator: PropTypes.bool,
   colors: PropTypes.object,
-  hiddenOptions: PropTypes.array,
+  hiddenOptions: PropTypes.arrayOf(PropTypes.string),
 };
 
 export default Editor;
