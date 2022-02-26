@@ -55,6 +55,7 @@ These are the props we have -
 | hiddenOptions        | `array`    | specify the options need to hide from toolbar (options - _bold, italic, highlight, code, underline, strikethrough, ordered-list-item, unordered-list-item, header-one, header-tow_) | `hiddenOptions={["header-one","unordered-list-item"]}`                                                                                                                           |
 
 
+
 ## Getting readable text
 
 There are 2 ways of getting plane readable text - 
