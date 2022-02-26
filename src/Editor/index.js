@@ -5,7 +5,8 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
+exports.default = Editor;
+exports.getPlaneTextFromEditorState = getPlaneTextFromEditorState;
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -289,6 +290,10 @@ function Editor(props) {
       if (contentState !== null && contentState !== void 0 && (_contentState$getPlai = contentState.getPlainText()) !== null && _contentState$getPlai !== void 0 && _contentState$getPlai.trim()) props.onChange(stringifyContent);else props.onChange("");
     }
 
+    if (props.getPlaneTextOnChange) {
+      props.getPlaneTextOnChange(contentState === null || contentState === void 0 ? void 0 : contentState.getPlainText());
+    }
+
     changeActiveOption(currentState);
     setEditorState(currentState);
   };
@@ -472,6 +477,7 @@ Editor.propTypes = {
   defaultState: _propTypes.default.string,
   placeholder: _propTypes.default.string,
   onChange: _propTypes.default.func,
+  getPlaneTextOnChange: _propTypes.default.func,
   readOnly: _propTypes.default.bool,
   error: _propTypes.default.bool,
   className: _propTypes.default.string,
@@ -481,5 +487,16 @@ Editor.propTypes = {
   colors: _propTypes.default.object,
   hiddenOptions: _propTypes.default.arrayOf(_propTypes.default.string)
 };
-var _default = Editor;
-exports.default = _default;
+
+function getPlaneTextFromEditorState(state) {
+  if (!state) return "";
+  var currentState;
+
+  try {
+    currentState = _draftJs.EditorState.createWithContent((0, _draftJs.convertFromRaw)(JSON.parse(state)));
+  } catch (err) {
+    return "";
+  }
+
+  return currentState.getCurrentContent().getPlainText();
+}

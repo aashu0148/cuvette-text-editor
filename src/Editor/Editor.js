@@ -252,6 +252,9 @@ function Editor(props) {
         props.onChange(stringifyContent);
       else props.onChange("");
     }
+    if (props.getPlaneTextOnChange) {
+      props.getPlaneTextOnChange(contentState?.getPlainText());
+    }
 
     changeActiveOption(currentState);
     setEditorState(currentState);
@@ -469,6 +472,7 @@ Editor.propTypes = {
   defaultState: PropTypes.string,
   placeholder: PropTypes.string,
   onChange: PropTypes.func,
+  getPlaneTextOnChange: PropTypes.func,
   readOnly: PropTypes.bool,
   error: PropTypes.bool,
   className: PropTypes.string,
@@ -479,4 +483,19 @@ Editor.propTypes = {
   hiddenOptions: PropTypes.arrayOf(PropTypes.string),
 };
 
-export default Editor;
+function getPlaneTextFromEditorState(state) {
+  if (!state) return "";
+
+  let currentState;
+  try {
+    currentState = EditorState.createWithContent(
+      convertFromRaw(JSON.parse(state))
+    );
+  } catch (err) {
+    return "";
+  }
+
+  return currentState.getCurrentContent().getPlainText();
+}
+
+export { Editor as default, getPlaneTextFromEditorState };
